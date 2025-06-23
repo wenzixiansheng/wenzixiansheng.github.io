@@ -1,0 +1,71 @@
+<!doctype html>
+<head>
+<title>{?$article_title?}最新章节列表_{?$article_title?}最新章节目录_{?$jieqi_sitename?}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="keywords" content="{?$article_title?},{?$article_title?}最新章节" />
+<meta name="description" content="{?$article_title?}最新章节由网友提供，《{?$article_title?}》情节跌宕起伏、扣人心弦，是一本情节与文笔俱佳的{?$sort?}，{?$jieqi_sitename?}免费提供{?$article_title?}最新清爽干净的文字章节在线阅读。" />
+<link rel="stylesheet" type="text/css" href="/images/biquge.css"/>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>-->
+<script type="text/javascript" src="/images/bqg.js"></script>
+<script language="javascript" type="text/javascript">var bookid = "{?$articleid?}"; var booktitle = "{?$article_title?}";</script>
+</head>
+<body>
+	<div id="wrapper">
+		
+		{?include file="17mb/head.html"?}
+
+		<div class="box_con">
+			<div class="con_top">
+				<div id="bdshare" class="bdshare_b" style="line-height: 12px;"><img src="http://bdimg.share.baidu.com/static/images/type-button-7.jpg" /><a class="shareCount"></a></div>
+				<a href="/">{?$jieqi_sitename?}</a> &gt; <a href="{?if $sortid == 1?}/xuanhuanxiaoshuo/{?/if?}{?if $sortid == 2?}/xiuzhenxiaoshuo/{?/if?}{?if $sortid == 3?}/dushixiaoshuo/{?/if?}{?if $sortid == 4?}/chuanyuexiaoshuo/{?/if?}{?if $sortid == 5?}/wangyouxiaoshuo/{?/if?}{?if $sortid == 6?}/kehuanxiaoshuo/{?/if?}{?if $sortid == 7?}/qitaxiaoshuo/{?/if?}">{?$sortname?}</a>  &gt; {?$article_title?}最新章节列表
+			</div>
+			<div id="maininfo">
+				<div id="info">
+					<h1>{?$article_title?}</h1>
+					<p>作&nbsp;&nbsp;&nbsp;&nbsp;者：{?$author?}</p>
+					<p>动&nbsp;&nbsp;&nbsp;&nbsp;作：<a href="javascript:;" onClick="showpop('/modules/article/addbookcase.php?bid={?$articleid?}&ajax_request=1');">加入书架</a>,  <a href="javascript:;" onClick="showpop('/modules/article/uservote.php?id={?$articleid?}&ajax_request=1');">投推荐票</a>,  <a href="#footer">直达底部</a></p>
+					<p>最后更新：{?$mytime?}</p>
+					<p>下&nbsp;&nbsp;&nbsp;&nbsp;载：( <a href="/modules/article/txtarticle.php?id={?$articleid?}">TXT</a>,CHM,UMD,JAR,APK,HTML )</p>
+				</div>
+				<div id="intro">
+					<p>{?$intro?}</p>
+				</div>
+			</div>
+			<div id="sidebar">
+				<div id="fmimg"><script src="/modules/article/52mb_uptime.php?id={?$articleid?}&type=img"></script><span class="{?if $fullflag == 0?}b{?else?}a{?/if?}"></span></div>
+			</div> 
+			<div id="listtj">&nbsp;推荐阅读：{?$top_allvote?}</div>
+		</div>
+		
+        <div class="dahengfu"><script type="text/javascript">list1();</script></div>
+        
+		<div class="box_con">
+			<div id="list">
+				<dl>
+					<dt><b>《{?$article_title?}》最新章节</b>（提示：已启用缓存技术，最新章节可能会延时显示，登录书架即可实时查看。）</dt>
+						{?$top9?}
+					<!--<dt>《{?$article_title?}》正文</dt>-->
+                    {?section name=i loop=$indexrows?}
+                      {?if $indexrows[i].ctype == "volume"?}
+                        {?if $indexrows[i].vname == ""?}&nbsp;{?else?}<dt>{?$indexrows[i].vname?}</dt>{?/if?}{?else?}
+                        {?if $indexrows[i].cname1 == ""?}{?else?}<dd><a href="{?$articleid|subdirectory?}_{?$articleid?}/{?$indexrows[i].cid1?}.html">{?$indexrows[i].cname1?}</a></dd>{?/if?}
+                        {?if $indexrows[i].cname2 == ""?}{?else?}<dd><a href="{?$articleid|subdirectory?}_{?$articleid?}/{?$indexrows[i].cid2?}.html">{?$indexrows[i].cname2?}</a></dd>{?/if?}
+                        {?if $indexrows[i].cname3 == ""?}{?else?}<dd><a href="{?$articleid|subdirectory?}_{?$articleid?}/{?$indexrows[i].cid3?}.html">{?$indexrows[i].cname3?}</a></dd>{?/if?}
+                        {?if $indexrows[i].cname4 == ""?}{?else?}<dd><a href="{?$articleid|subdirectory?}_{?$articleid?}/{?$indexrows[i].cid4?}.html">{?$indexrows[i].cname4?}</a></dd>{?/if?}
+                      {?/if?}
+                     {?/section?}
+				</dl>
+			</div>
+		</div>
+        
+        <div class="dahengfu"><script type="text/javascript">bottom();</script></div>
+        
+		<div id="footer" name="footer">
+			<div class="footer_link">&nbsp;新书推荐：{?$top_postdate?}  </div>
+			<div class="footer_cont">
+				<p>《{?$article_title?}》情节跌宕起伏、扣人心弦，是一本情节与文笔俱佳的{?$sortname?}，{?$jieqi_sitename?}转载收集{?$article_title?}最新章节。</p>
+				<script>footer();right();dl();</script>
+			</div>
+		</div>
+<script src="/modules/article/articleinfo.php?id={?$articleid?}"></script>

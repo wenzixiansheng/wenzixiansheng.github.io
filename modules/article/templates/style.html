@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>{?$jieqi_title?}_{?$article_title?}_{?$sortname?}_{?$jieqi_sitename?}</title>
+<meta http-equiv="Content-Type" content="text/html; charset={?$jieqi_charset?}" />
+<meta name="keywords" content="{?$article_title?},{?$jieqi_title?}" />
+<meta name="description" content="{?$jieqi_sitename?}提供了{?$author?}创作的{?$sortname?}《{?$article_title?}》干净清爽无错字的文字章节：{?$jieqi_title?}在线阅读。" />
+<link rel="stylesheet" type="text/css" href="{?$jieqi_url?}/images/biquge.css"/>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>-->
+<script type="text/javascript" src="{?$jieqi_url?}/images/bqg.js"></script>
+<script type="text/javascript">var preview_page = "{?if $preview_page|strstr:cid ===false?}{?$articleid|subdirectory?}_{?$article_id?}/{?else?}{?$articleid|subdirectory?}_{?$article_id?}/{?$preview_chapterid?}.html{?/if?}";var next_page = "{?if $next_page|strstr:dynamic ===false?}{?$articleid|subdirectory?}_{?$article_id?}/{?$next_chapterid?}.html{?else?}{?$articleid|subdirectory?}_{?$article_id?}/{?/if?}";var index_page = "{?$articleid|subdirectory?}_{?$article_id?}/";var article_id = "{?$article_id?}";	var chapter_id = "{?$chapter_id?}";	function jumpPage() {var event = document.all ? window.event : arguments[0];if (event.keyCode == 37) document.location = preview_page;if (event.keyCode == 39) document.location = next_page;if (event.keyCode == 13) document.location = index_page;}document.onkeydown=jumpPage;</script>
+</head>
+<body>
+	<div id="wrapper">
+		{?include file="17mb/head.html"?}
+		<div class="content_read">
+			<div class="box_con">
+				<div class="con_top">
+					<script>textselect();</script>
+					<a href="/">{?$jieqi_sitename?}</a> &gt; <a href="{?if $sortid == 1?}/xuanhuanxiaoshuo/{?/if?}{?if $sortid == 2?}/xiuzhenxiaoshuo/{?/if?}{?if $sortid == 3?}/dushixiaoshuo/{?/if?}{?if $sortid == 4?}/chuanyuexiaoshuo/{?/if?}{?if $sortid == 5?}/wangyouxiaoshuo/{?/if?}{?if $sortid == 6?}/kehuanxiaoshuo/{?/if?}{?if $sortid == 7?}/qitaxiaoshuo/{?/if?}">{?$sortname?}</a> &gt; <a href="{?$url_articleinfo?}">{?$article_title?}</a> &gt; {?$jieqi_title?}
+				</div>
+				<div class="bookname">
+					<h1>{?$jieqi_title?}</h1>
+					<div class="bottem1">
+						<a href="javascript:;" onclick="showpop('/modules/article/uservote.php?id={?$articleid?}&ajax_request=1');">投推荐票</a> <a href="{?if $preview_page|strstr:cid ===false?}{?$articleid|subdirectory?}_{?$article_id?}/{?else?}{?$articleid|subdirectory?}_{?$article_id?}/{?$preview_chapterid?}.html{?/if?}">上一章</a> &larr; <a href="{?$url_articleinfo?}">章节目录</a> &rarr; <a href="{?if $next_page|strstr:dynamic ===false?}{?$articleid|subdirectory?}_{?$article_id?}/{?$next_chapterid?}.html{?else?}{?$articleid|subdirectory?}_{?$article_id?}/{?/if?}">下一章</a> <a href="javascript:;" onclick="showpop('/modules/article/addbookcase.php?id={?$articleid?}&cid={?$chapterid?}&ajax_request=1');">加入书签</a>
+					</div>
+					<div class="lm">&nbsp;热门推荐：{?$top_allvote?}</div>
+				</div>
+				<table style="width:100%; text-align:center;"><tr><td><script>read_1_1();</script></td><td><script>read_1_2();</script></td><td><script>read_1_3();</script></td></tr></table>
+				<div id="content">{?$jieqi_content?}</div>
+				<div class="bottem2">
+					<a href="javascript:;" onclick="showpop('/modules/article/uservote.php?id={?$articleid?}&ajax_request=1');">投推荐票</a> <a href="{?if $preview_page|strstr:cid ===false?}{?$articleid|subdirectory?}_{?$article_id?}/{?else?}{?$articleid|subdirectory?}_{?$article_id?}/{?$preview_chapterid?}.html{?/if?}">上一章</a> &larr; <a href="{?$url_articleinfo?}">章节目录</a> &rarr; <a href="{?if $next_page|strstr:dynamic ===false?}{?$articleid|subdirectory?}_{?$article_id?}/{?$next_chapterid?}.html{?else?}{?$articleid|subdirectory?}_{?$article_id?}/{?/if?}">下一章</a> <a href="javascript:;" onclick="showpop('/modules/article/addbookcase.php?id={?$articleid?}&cid={?$chapterid?}&ajax_request=1');">加入书签</a>
+				</div>
+				<div id="hm_t_20123"></div>
+			</div>
+		</div>
+		<div class="footer">
+		    <div class="footer_link">&nbsp;新书推荐：{?$top_postdate?}</div>
+			<div class="footer_cont">
+				<script>footer();right();dl();</script>
+				<!--<script>mark();</script>-->
+                <div class="reader_mark1"><a href="javascript:;" onclick="showpop('/modules/article/addbookcase.php?id={?$articleid?}&cid={?$chapterid?}&ajax_request=1');"></a></div>
+                <div class="reader_mark0"><a href="javascript:;" onclick="showpop('/modules/article/uservote.php?id={?$articleid?}&ajax_request=1');"></a></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
+</html>

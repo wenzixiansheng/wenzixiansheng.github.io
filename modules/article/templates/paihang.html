@@ -1,0 +1,415 @@
+<!doctype html>
+<html>
+<head>
+<title>{?$jieqi_sitename?}书友最值得收藏的网络小说阅读网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="keywords" content="{?$jieqi_sitename?},网络小说,小说阅读网,小说" />
+<meta name="description" content="{?$jieqi_sitename?}是广大书友最值得收藏的网络小说阅读网，网站收录了当前最火热的网络小说，免费提供高质量的小说最新章节，是广大网络小说爱好者必备的小说阅读网。" />
+<link rel="stylesheet" type="text/css" href="/images/biquge.css"/>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>-->
+<script type="text/javascript" src="/images/bqg.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		{?include file = "17mb/head.html"?}
+		
+        <div id="main">
+
+<style type="text/css">
+<!--
+ol li,ul li{list-style:none;}
+#tops_nav{margin-top:15px;height:30px;border:1px solid #9AE6C5;background-color:#E3F4E7;}
+#tops_nav ol{margin:0 auto;width:960px;line-height:30px;}
+#tops_nav ol li{float:left;padding-top:0!important;padding-top:4px;width:320px;text-align:center;}
+#tops_nav ol li input{height:22px;line-height:22px;width:100px;background-color:#DDF2FF;border:1px solid #83B0E1;}
+
+.box{float:left;padding-top:25px;margin:25px 4px auto 4px;width:234px;height:549px;border-style:solid;border-width:1px;position:relative;}
+.box h3{top:-13px;left:37px;width:161px;height:24px;line-height:24px;border-style:solid;border-width:1px;font-size:12px;text-align:center;position:absolute;}
+.box ul{width:96%;}
+.box ul li{padding-left:10px;height:24px;line-height:25px;border-bottom:1px solid #e4e4e4;font-size:12px;text-align:left;position:relative;}
+.box ul li.more{border-bottom:0;}
+.box ul li.ltitle span,.box ul li.ltitle span a{color:#555;}
+.box ul li.ltitle span a,.box ul li.ltitle span a:hover{color:#555;text-decoration:underline;}
+.box ul li a{margin-left:10px;line-height:25px;color:#3366BB;}
+.box ul li a:hover{color:#F60;text-decoration:underline;}
+.box ul li span{right:10px;top:0px;position:absolute;}
+
+.b1,.b1 h3{border-color:#F9CDDE;}
+.b1 h3{background-color:#FCDEEA;}
+.b2,.b2 h3{border-color:#B0DBEC;}
+.b2 h3{background-color:#D6ECF7;}
+.b3,.b3 h3{border-color:#EFEAAA;}
+.b3 h3{background-color:#FAF1D4;}
+.b4,.b4 h3{border-color:#D5E6B9;}
+.b4 h3{background-color:#E5F8CB;}
+-->
+</style>
+
+<script language="javascript" type="text/javascript">
+<!--
+$(function($) {
+	$(".ltitle a").click( function () {
+		var pos = $(this).attr('alt');
+		var self = $(this).parent().parent().parent();
+		self.hide();
+		self.parent().children('ul').eq(pos).show();
+	});
+});
+-->
+</script>
+
+	<div id="main">
+		<div id="tops_nav">
+			<ol>
+				<li><input type="button" value="小说推荐排行榜" onclick="window.location='allvote.html'" /></li>
+				<li><input type="button" value="小说收藏排行榜" onclick="window.location='goodnum.html'" /></li>
+				<li><input type="button" value="小说新书入库榜" onclick="window.location='newbook.html'" /></li>
+			</ol>
+		</div>
+
+{?if $jieqi_thisurl|strstr:"type1" !== false?}
+
+		<div class="box b1">
+			<h3>玄幻·奇幻小说推荐排行榜</h3>
+			<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,20,1,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xuanhuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,20,1,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xuanhuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,20,1,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xuanhuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,20,1,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+
+				<li class="more"><span><a href="/xuanhuanxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b2">
+			<h3>修真·仙侠小说推荐排行榜</h3>
+
+				<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,20,2,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xiuzhenxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,20,2,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xiuzhenxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,20,2,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xiuzhenxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,20,2,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+
+				<li class="more"><span><a href="/xiuzhenxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b3">
+			<h3>都市·青春小说推荐排行榜</h3>
+			<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,20,3,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/dushixiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,20,3,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/dushixiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,20,3,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/dushixiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,20,3,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+
+				<li class="more"><span><a href="/dushixiaoshuo/">更多</a></span></li>
+             </ul>
+		</div>
+
+		<div class="box b4">
+			<h3>历史·穿越小说推荐排行榜</h3>
+			<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,20,4,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/chuanyuexiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,20,4,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/chuanyuexiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,20,4,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/chuanyuexiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,20,4,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+
+				<li class="more"><span><a href="/chuanyuexiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b1">
+			<h3>网游·竞技小说推荐排行榜</h3>
+			<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,20,5,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/wangyouxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,20,5,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/wangyouxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,20,5,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/wangyouxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,20,5,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+
+				<li class="more"><span><a href="/wangyouxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b2">
+			<h3>科幻·灵异小说推荐排行榜</h3>
+			<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,20,6,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/kehuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,20,6,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/kehuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,20,6,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/kehuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,20,6,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+
+				<li class="more"><span><a href="/kehuanxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b3">
+			<h3>全本小说推荐排行榜</h3>
+			<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,21,0,0,1,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,21,0,0,1,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,21,0,0,1,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,21,0,0,1,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+		</div>
+
+		<div class="box b4">
+			<h3>全部小说推荐排行榜</h3>
+			<ul>
+				<li class="ltitle">总排名 	<span>总 <a href="####" alt="1">周</a><a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,21,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">周排名 	<span><a href="####" alt="0">总</a> 周<a href="####" alt="2">月</a><a href="####" alt="3">日</a></span></li>
+		{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="weekvote,21,0,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">月排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a> 月<a href="####" alt="3">日</a></span></li>
+			{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="monthvote,21,0,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+			<ul style="display:none;">
+				<li class="ltitle">日排名 	<span><a href="####" alt="0">总</a><a href="####" alt="1">周</a><a href="####" alt="2">月</a> 日</span></li>
+	{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="dayvote,21,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+
+			</ul>
+		</div>
+	</div>
+{?/if?}	
+{?if $jieqi_thisurl|strstr:"type2" !== false?}<!--2 begin-->
+
+<div class="box b1">
+			<h3>玄幻·奇幻小说收藏排行榜</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,21,1,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xuanhuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			
+		</div>
+
+		<div class="box b2">
+			<h3>修真·仙侠小说收藏排行榜</h3>
+				<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,21,2,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xiuzhenxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b3">
+			<h3>都市·青春小说收藏排行榜</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,21,3,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/dushixiaoshuo/">更多</a></span></li>
+			</ul>
+			
+		</div>
+
+		<div class="box b4">
+			<h3>历史·穿越小说收藏排行榜</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,21,4,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/chuanyuexiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b1">
+			<h3>网游·竞技小说收藏排行榜</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,21,5,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/wangyouxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b2">
+			<h3>科幻·灵异小说收藏排行榜</h3>
+			<ul>				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,21,6,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/kehuanxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b3">
+			<h3>全本小说收藏排行榜</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,22,0,0,1,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+		</div>
+
+		<div class="box b4">
+			<h3>全部小说收藏排行榜</h3>
+			<ul>				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="goodnum,22,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+		</div>
+	</div><!--2 end-->
+{?/if?}
+{?if $jieqi_thisurl|strstr:"type3" !== false?}<!--3 begin-->
+<div class="box b1">
+			<h3>玄幻·奇幻小说最新入库</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,21,1,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xuanhuanxiaoshuo/">更多</a></span></li>
+			</ul>
+			
+		</div>
+
+		<div class="box b2">
+			<h3>修真·仙侠小说最新入库</h3>
+				<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,21,2,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/xiuzhenxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b3">
+			<h3>都市·青春小说最新入库</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,21,3,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/dushixiaoshuo/">更多</a></span></li>
+			</ul>
+			
+		</div>
+
+		<div class="box b4">
+			<h3>历史·穿越小说最新入库</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,21,4,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/chuanyuexiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b1">
+			<h3>网游·竞技小说最新入库</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,21,5,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/wangyouxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b2">
+			<h3>科幻·灵异小说最新入库</h3>
+			<ul>				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,21,6,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+				<li class="more"><span><a href="/kehuanxiaoshuo/">更多</a></span></li>
+			</ul>
+		</div>
+
+		<div class="box b3">
+			<h3>全本小说最新入库</h3>
+			<ul>
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,22,0,0,1,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+		</div>
+
+		<div class="box b4">
+			<h3>全部小说最新入库</h3>
+			<ul>				
+                {?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="postdate,22,0,0,0,0" template="52mb_paihang_vote.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+			</ul>
+		</div>
+	</div><!--3 end-->
+{?/if?}
+
+		</div>
+	
+ {?include file = "17mb/foot.html"?}
+        
+	</div>
+</body>
+<script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
+</html>

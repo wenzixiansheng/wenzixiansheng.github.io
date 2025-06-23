@@ -1,0 +1,40 @@
+{?set jieqi_blocks_module = "article"?}
+{?set jieqi_blocks_config = "guideblocks"?}
+<div id="hotcontent"><div class="ll">
+{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvisit,6,class,0,0,0" template="52mb_sort_top6.html" contenttype="2" custom="0" publish="3" hasvars="1"?}
+     </div>
+</div>
+
+<div class="dahengfu"><script type="text/javascript">list1();</script></div>
+
+<div id="newscontent">
+<div class="l">
+<h2>{?if $sort != ""?}好看的{?$sort?}最近更新列表{?else?}好看的完本小说列表{?/if?}</h2>
+<ul>
+{?section name=i loop=$articlerows?}       
+<li><span class="s2">《<a href="{?$articlerows[i].url_articleinfo?}" target="_blank">{?$articlerows[i].articlename?}</a>》</span><span class="s3"><a href="{?$articlerows[i].articleid|subdirectory?}_{?$articlerows[i].articleid?}/{?$articlerows[i].lastchapterid?}.html" target="_blank">{?$articlerows[i].lastchapter?}</a>({?$articlerows[i].uptime|date:"m-d"?})</span><span class="s5">{?$articlerows[i].author?}</span></li>
+{?/section?}
+</ul>
+
+<div class="page_b">
+<table style=""><tr><td>
+{?if $jieqi_thisurl|strstr:1&page !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$url_jumppage|str_replace:"list":"/xuanhuanxiaoshuo/"|str_replace:"</kbd>":"</kbd><div style='clear:both'></div>"?}{?/if?}
+{?if $jieqi_thisurl|strstr:2&page !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$url_jumppage|str_replace:"list":"/xiuzhenxiaoshuo/"?}{?/if?}
+{?if $jieqi_thisurl|strstr:3&page !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$url_jumppage|str_replace:"list":"/dushixiaoshuo/"?}{?/if?}
+{?if $jieqi_thisurl|strstr:4&page !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$url_jumppage|str_replace:"list":"/chuanyuexiaoshuo/"?}{?/if?}
+{?if $jieqi_thisurl|strstr:5&page !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$url_jumppage|str_replace:"list":"/wangyouxiaoshuo/"?}{?/if?}
+{?if $jieqi_thisurl|strstr:6&page !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$url_jumppage|str_replace:"list":"/kehuanxiaoshuo/"?}{?/if?}
+{?if $jieqi_thisurl|strstr:7&page !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$url_jumppage|str_replace:"list":"/qitaxiaoshuo/"?}{?/if?}
+{?if $jieqi_thisurl|strstr:fullflag !== false?}{?$url_jumppage|str_replace:"/modules/article/articlelist.php?fullflag=":"/wanben/"|str_replace:"&page=":"_"?}{?/if?}
+</td></tr></table>
+</div>
+</div>
+<div class="r">
+<h2>好看的{?$sort?}</h2>
+<ul>
+{?block bid="0" module="article" filename="block_articlelist" classname="BlockArticleArticlelist" side="0" title="" vars="allvote,30,class,0,0,0" template="52mb_sort_allvote.html" contenttype="2" custom="0" publish="3" hasvars="1"?} 
+</ul>
+<div class="page_b page_b2">喜欢就收藏我们</div>
+</div>
+<div class="clear"></div></div>
+</div>

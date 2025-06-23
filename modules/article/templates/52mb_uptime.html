@@ -1,0 +1,3 @@
+{?set jieqi_page_template = "modules/article/templates/theme.html"?}
+{?if $jieqi_thisurl|strstr:img !== false ?}document.writeln("<img alt='{?$article_title?}' src='{?$url_simage?}' width='120' height='150' />"){?/if?}
+{?if $jieqi_thisurl|strstr:lastupdate !== false ?}document.writeln("{?$lastupdate?}"){?/if?}

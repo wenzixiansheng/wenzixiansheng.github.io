@@ -1,0 +1,54 @@
+{?set jieqi_blocks_module = "system"?}
+{?include file="17mb/user_top.html"?}
+<table class="grid" width="88%" align="center">
+<caption>用户信息</caption>
+
+  <tr align="left">
+    <td class="odd" width="33%">帐号：</td>
+    <td class="even">{?$uname?}</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">昵称：</td>
+    <td class="even">{?$name?}</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">等级：</td>
+    <td class="even"><span class="hottext">{?$honor?}</span>（注：等级越高，权限越大）</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">性别：</td>
+    <td class="even">{?$sex?}</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">Email：</td>
+    <td class="even"><a href="mailto:{?$email?}">{?$email?}</a></td>
+  </tr>
+  <tr align="left">
+    <td class="odd">QQ：</td>
+    <td class="even">{?$qq?}</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">博客/微博：</td>
+    <td class="even"><a href="{?$url?}" target="_blank">{?$url?}</a></td>
+  </tr>
+  <tr align="left">
+    <td class="odd">注册日期：</td>
+    <td  class="even">{?$regdate?}</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">现有积分：</td>
+    <td  class="even">{?$score?}（注：积分越多，等级越高）</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">信箱消息收容量：</td>
+    <td  class="even">{?$system_maxmessages?}</td>
+  </tr>
+  <tr align="left">
+    <td class="odd">书架最大收藏量：</td>
+    <td  class="even"><span class="hottext">{?$article_maxbookmarks?}</span></td>
+  </tr>
+  <tr align="left">
+    <td class="odd">每天拥有推荐票数：</td>
+    <td  class="even"><span class="hottext">{?$article_dayvotes?}</span></td>
+  </tr>
+</table>

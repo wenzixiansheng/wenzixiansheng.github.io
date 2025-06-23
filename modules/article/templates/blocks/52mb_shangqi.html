@@ -1,0 +1,1 @@
+{?section name=i loop=$articlerows?} <li><span class="s1">[{?$articlerows[i].sort|truncate:"4"?}]</span><span class="s2"><a href="{?$articlerows[i].url_articleinfo?}">{?$articlerows[i].articlename?}</a></span><span class="s5">{?$articlerows[i].author?}</span></li>{?/section?}

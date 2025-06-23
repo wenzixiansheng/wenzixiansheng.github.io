@@ -1,0 +1,51 @@
+{?set jieqi_blocks_module = "system"?}
+{?include file="17mb/user_top.html"?}
+<form name="useredit" id="useredit" action="{?$jieqi_url?}/useredit.php?do=submit" method="post" onsubmit="return jieqiFormValidate_useredit();">
+<table width="580" class="grid" cellspacing="1" align="center">
+<caption>用户资料修改</caption>
+<tr valign="middle" align="left">
+  <td class="odd" width="25%">帐号</td>
+  <td class="even">{?$username?}</td>
+</tr>
+<tr valign="middle" align="left">
+  <td class="odd" width="25%">昵称</td>
+  <td class="even"><input type="text" class="text" name="nickname" id="nickname" size="25" maxlength="39" value="{?$nickname?}" /></td>
+</tr>
+<tr valign="middle" align="left">
+  <td class="odd" width="25%">Email</td>
+  <td class="even"><input type="text" class="text" name="email" id="email" size="25" maxlength="60" value="{?$email?}" />（须填写真实常用的邮箱，如：qq号码@qq.com）
+</td>
+</tr>
+<tr valign="middle" align="left">
+<td class="odd" width="25%">性别</td>
+<td class="even">
+<input type="radio" class="radio" name="sex" value="1"{?if $sex == 1?} checked="checked"{?/if?}  />男
+<input type="radio" class="radio" name="sex" value="2"{?if $sex == 2?} checked="checked"{?/if?} />女
+<input type="radio" class="radio" name="sex" value="0"{?if $sex == 0?} checked="checked"{?/if?}  />妖
+</tr>
+<tr valign="middle" align="left">
+  <td class="odd" width="25%">QQ</td>
+  <td class="even"><input type="text" class="text" name="qq" id="qq" size="25" maxlength="15" value="{?$qq?}" /></td>
+</tr>
+<tr valign="middle" align="left">
+  <td class="odd" width="25%">博客/微博</td>
+  <td class="even"><input type="text" class="text" name="url" id="url" size="25" maxlength="100" value="{?$url?}" /></td>
+</tr>
+<tr valign="middle" align="left">
+  <td class="odd" width="25%">&nbsp;<input type="hidden" name="action" id="action" value="update" /></td>
+  <td class="even"><input type="submit" class="button" name="submit"  id="submit" value=" 保 存 " /></td>
+</tr>
+</table>
+</form>
+
+<script language="javascript" type="text/javascript">
+<!--
+function jieqiFormValidate_useredit(){
+  if(document.useredit.email.value == ""){
+    alert("请输入Email");
+    document.useredit.email.focus();
+    return false;
+  }
+}
+//-->
+</script>

@@ -1,0 +1,3 @@
+{?section name=i loop=$articlerows?} 
+<li><span class="s1">[{?$articlerows[i].sort|truncate:"4"?}]</span><span class="s2"><a href="{?$articlerows[i].url_articleinfo?}">{?$articlerows[i].articlename?}</a>{?if $articlerows[i].fullflag == "已完成"?}(完){?/if?}</span><span class="s5">{?$articlerows[i].author?}</span></li>
+{?/section?}

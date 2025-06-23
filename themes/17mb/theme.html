@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>{?if $jieqi_thisurl|strstr:/articlelist.php !== false && $jieqi_thisurl|strstr:fullflag === false?}{?$sort?}_好看的{?$sort?}_2014{?$sort?}排行榜_{?$jieqi_sitename?}{?else?}{?if $jieqi_thisurl|strstr:fullflag !== false?}完本小说_{?$jieqi_sitename?}{?else?}{?if $jieqi_thisurl|strstr:/search.php !== false?}{?if $searchkey !=""?}{?$searchkey?}-{?/if?}搜索-{?$jieqi_sitename?}{?else?}{?$jieqi_sitename?}_书友最值得收藏的网络小说阅读网{?/if?}  {?/if?}{?/if?}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="keywords" content="{?if $jieqi_thisurl|strstr:/articlelist.php !== false && $jieqi_thisurl|strstr:fullflag === false ?}{?$sort?},好看的{?$sort?},2013{?$sort?}排行榜{?else?}{?if $jieqi_thisurl|strstr:/articlelist.php !== false && $jieqi_thisurl|strstr:fullflag !== false ?}{?else?}{?if $jieqi_thisurl|strstr:/toplist.php !== false?}{?$articletitle?},{?$jieqi_sitename?}{?else?}{?if $jieqi_thisurl|strstr:/articleinfo.php !== false?}{?$articlename?}最新章节,{?$articlename?}全文阅读,{?$articlename?}TXT全文下载,{?$author?}{?else?}<title>标题、关键词、描述</title>{?/if?}{?/if?}{?/if?}{?/if?}" />
+<meta name="description" content="{?if $jieqi_thisurl|strstr:/articlelist.php !== false && $jieqi_thisurl|strstr:fullflag === false ?}{?$jieqi_sitename?}是广大书友最值得收藏的{?$sort?}阅读网，网站收录了当前最好看的{?$sort?}，免费提供高质量的2014{?$sort?}排行榜，是广大{?$sort?}爱好者必备的小说阅读网。{?else?}{?if $jieqi_thisurl|strstr:/articlelist.php !== false && $jieqi_thisurl|strstr:fullflag !== false ?}{?else?}{?if $jieqi_thisurl|strstr:/toplist.php !== false?}{?$jieqi_sitename?}提供小说{?$articletitle?},小说2014排行榜，更新最多最快的免费小说排行榜。{?else?}{?if $jieqi_thisurl|strstr:/articleinfo.php !== false?}{?$articlename?}最新章节由网友提供，《{?$articlename?}》情节跌宕起伏、扣人心弦，是一本情节与文笔俱佳的{?$sort?}，{?$jieqi_sitename?}免费提供{?$articlename?}最新清爽干净的文字章节在线阅读。{?else?}{?$meta_description?}{?/if?}{?/if?}{?/if?}{?/if?}" />
+<link rel="stylesheet" type="text/css" href="/images/biquge.css"/>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>-->
+<script type="text/javascript" src="/images/bqg.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		{?include file = "17mb/head.html"?}
+		
+        <div id="main">
+        {?if $jieqi_contents != ""?}<div id="content">{?$jieqi_contents?}</div>{?/if?}
+        </div>
+
+		</div>
+
+		
+        {?include file = "17mb/foot.html"?}
+        
+	</div>
+</body>
+<script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
+</html>
